@@ -22,7 +22,6 @@ public class MoodAnalyserException extends Throwable {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
         String mood = moodAnalyser.analyserMood("this is Sad message");
         Assert.assertEquals("SAD", mood);
-
     }
 
     @Test
@@ -66,18 +65,6 @@ public class MoodAnalyserException extends Throwable {
             mood = moodAnalyser.analyserMood(null);
         } catch (MoodAnalyserException e) {
             Assert.assertEquals("HAPPY", mood);
-        }
-
-    }
-    @Test
-    public void givenMessage_WhenNull_ShouldThrowException()
-    {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = null;
-        try {
-            mood = moodAnalyser.analyserMood(null);
-        }catch(MoodAnalyserException e){
-            Assert.assertEquals("MoodAnalyserException",mood);
         }
 
     }
