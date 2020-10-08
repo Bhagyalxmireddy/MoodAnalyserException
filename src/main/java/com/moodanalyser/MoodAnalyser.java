@@ -3,10 +3,10 @@ package com.moodanalyser;
 public class MoodAnalyser {
     public String analyserMood(String message) {
         try {
-            if (message.contains("SAD")) {
-                return "SAD";
+            if (message.contains("HAPPY")) {
+                return "HAAPY";
             } else {
-                return "HAPPY";
+                return "SAD";
             }
         }catch (NullPointerException e){
             return "HAPPY";
