@@ -2,6 +2,7 @@ package com.moodanalyser;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class MoodAnalyserException extends Throwable {
     @Test
@@ -50,6 +51,16 @@ public class MoodAnalyserException extends Throwable {
             mood = moodAnalyser.analyserMood("");
         }catch( MoodAnalyserException e) {
             Assert.assertEquals("SAD", mood);
+        }
+    }
+    @Test
+    public void givenMessage_WhenNull_ShouldReturnHappy()  {
+        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        String mood = null ;
+        try {
+            mood = moodAnalyser.analyserMood(null);
+        } catch (MoodAnalyserException e) {
+            Assert.assertEquals("HAPPY",mood);
         }
     }
 }
