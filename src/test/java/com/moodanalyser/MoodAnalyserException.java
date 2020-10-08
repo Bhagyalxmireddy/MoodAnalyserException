@@ -75,25 +75,5 @@ public class MoodAnalyserException extends Throwable {
 
     }
 
-    @Test
-    public void givenMessage_WhenNull_ShouldThrowAnException() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = null;
-        try {
-            ExpectedException exceptionRule = ExpectedException.none();
-            exceptionRule.expect(MoodAnalyserTest.class);
-            mood = moodAnalyser.analyserMood(null);
-        }catch (MoodAnalyserTest e) {
-            Assert.assertEquals(MoodAnalyserTest.ExceptionType.ENTERED_NULL,e.type);
-        }
-    }
-    @Test
-    public void givenMessage_WhenEmpty_ShouldThrowAnException() {
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
-        try {
-            moodAnalyser.analyserMood("");
-        }catch (MoodAnalyserTest e) {
-            Assert.assertEquals(MoodAnalyserTest.ExceptionType.ENTERED_EMPTY,e.type);
-        }
-    }
+
 }
