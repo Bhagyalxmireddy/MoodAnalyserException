@@ -1,7 +1,7 @@
 package com.moodanalyser;
 
 public class MoodAnalyser {
-    public String analyserMood(String message) {
+    public String analyserMood(String message) throws MoodAnalyserException {
         try {
             if (message.contains("HAPPY")) {
                 return "HAAPY";
@@ -9,7 +9,7 @@ public class MoodAnalyser {
                 return "SAD";
             }
         }catch (NullPointerException e){
-            return "HAPPY";
+            throw new MoodAnalyserException("please enter proper message");
         }
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodanalyser.MoodAnalyserException" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-08T03:50:25" hostname="DESKTOP-25DPEJS" time="0.02">
+<testsuite name="com.moodanalyser.MoodAnalyserException" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-08T04:16:25" hostname="DESKTOP-25DPEJS" time="0.01">
   <properties/>
-  <testcase name="givenMessage_WhenAny_ShouldReturnHappy" classname="com.moodanalyser.MoodAnalyserException" time="0.02"/>
+  <testcase name="givenMessage_WhenHappyMood_ShouldReturnSad" classname="com.moodanalyser.MoodAnalyserException" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
