@@ -80,10 +80,11 @@ public class MoodAnalyserTest extends Throwable {
         @Test
         public void givenMessage_WhenEmpty_ShouldReturnException() {
             MoodAnalyser moodAnalyser = new MoodAnalyser();
+            String mood ;
             try {
-                moodAnalyser.analyserMood("");
+              mood =  moodAnalyser.analyserMood("");
             } catch (MoodAnalyserException e) {
-                Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERE_EMPTY,e.type);
+                Assert.assertEquals(MoodAnalyserException.ExceptionType.ENTERED_NULL,e.type);
             }
 
     }
